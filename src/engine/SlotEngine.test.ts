@@ -1,0 +1,1 @@
+import{describe,expect,it}from'vitest';import{spin}from'./SlotEngine';describe('slot engine',()=>{it('returns a 3 by 5 board',()=>{const r=spin(50,()=>.5);expect(r.matrix).toHaveLength(3);expect(r.matrix[0]).toHaveLength(5)});it('never returns a negative win',()=>expect(spin(500).totalWin).toBeGreaterThanOrEqual(0))});
